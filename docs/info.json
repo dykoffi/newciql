@@ -1,0 +1,16 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "newedy",
+        "description": "new project for testing for edy",
+        "version": "1.4.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3983"
+        },
+        {
+            "url": "https://new.ciql.org"
+        }
+    ]
+}
