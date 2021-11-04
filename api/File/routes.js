@@ -57,7 +57,7 @@ router
     */
 
     .get("/", async function readFile(req, res) {
-        res.sendFile((join(cwd(), "output.webp")))
+        res.json(require('../../docs/_index'))
     })
 
     /**

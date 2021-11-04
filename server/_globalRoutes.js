@@ -4,6 +4,7 @@ const createError = require('http-errors');
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("../docs/_index");
 
+
 app.use('/User', require('../api/User/routes.js')); 
 app.use('/Classe', require('../api/Classe/routes.js')); 
 app.use('/File', require('../api/File/routes.js')); 
