@@ -1,0 +1,165 @@
+{
+    "/Ordi": {
+        "get": {
+            "operationId": "getOrdis",
+            "tags": [
+                "Ordi"
+            ],
+            "description": "\"Returns all Ordis",
+            "responses": {
+                "200": {
+                    "description": "List of Ordis"
+                },
+                "403": {
+                    "description": "Unauthorized"
+                },
+                "500": {
+                    "description": "Internal Error"
+                }
+            }
+        },
+        "post": {
+            "operationId": "addOrdi",
+            "tags": [
+                "Ordi"
+            ],
+            "description": "Add new Ordi",
+            "requestBody": {
+                "content": {
+                    "application/x-www-form-urlencoded": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "level": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": []
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "table created"
+                },
+                "403": {
+                    "description": "Unauthorized"
+                },
+                "500": {
+                    "description": "Internal Error"
+                }
+            }
+        },
+        "parameters": [
+            {
+                "in": "header",
+                "name": "x-access-token",
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ]
+    },
+    "/Ordi/{id}": {
+        "get": {
+            "operationId": "getOrdi",
+            "tags": [
+                "Ordi"
+            ],
+            "description": "Returns specific Ordi designated by id",
+            "responses": {
+                "200": {
+                    "description": "Ordi basic information"
+                },
+                "403": {
+                    "description": "Unauthorized"
+                },
+                "404": {
+                    "description": "Ordi not found"
+                },
+                "500": {
+                    "description": "Internal Error"
+                }
+            }
+        },
+        "put": {
+            "operationId": "updateOrdi",
+            "tags": [
+                "Ordi"
+            ],
+            "description": "Update Ordi",
+            "requestBody": {
+                "content": {
+                    "application/x-www-form-urlencoded": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "level": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": []
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "Ordi updated"
+                },
+                "403": {
+                    "description": "Unauthorized"
+                },
+                "404": {
+                    "description": "Ordi not found"
+                },
+                "500": {
+                    "description": "Internal Error"
+                }
+            }
+        },
+        "delete": {
+            "operationId": "deleteOrdi",
+            "tags": [
+                "Ordi"
+            ],
+            "description": "Delete specific Ordi designated by id",
+            "responses": {
+                "200": {},
+                "403": {
+                    "description": "Unauthorized"
+                },
+                "404": {
+                    "description": "Ordi not found"
+                },
+                "500": {
+                    "description": "Internal Error"
+                }
+            }
+        },
+        "parameters": [
+            {
+                "in": "path",
+                "name": "id",
+                "required": true,
+                "schema": {
+                    "type": "integer"
+                }
+            },
+            {
+                "in": "header",
+                "name": "x-access-token",
+                "schema": {
+                    "type": "string"
+                }
+            }
+        ]
+    }
+}
