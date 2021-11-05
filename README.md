@@ -16,6 +16,6 @@
 ### For Begining
 1. Type **ciql db connect** for connecting to existing db
 2. Define your db schema in schema.js (with sequelize model)
-3. Type **ciql code update** api files structure following your model
+3. Type **ciql code update** to update api files structure following your model
 4. Type **node index** to run project
 5. Type **ciql** for more options

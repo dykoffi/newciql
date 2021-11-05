@@ -7,7 +7,7 @@ module.exports = {
             name: { type: DataTypes.STRING }
         }
     },
-    Classe: {
+    Ordi: {
         attributes: {
             label: { type: DataTypes.STRING },
             level: { type: DataTypes.STRING },
